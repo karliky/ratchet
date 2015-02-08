@@ -254,7 +254,7 @@ module.exports = function (grunt) {
         files: [
           '<%= meta.srcPath %>**/*.scss'
         ],
-        tasks: ['sass']
+        tasks: ['dist']
       }
     },
 

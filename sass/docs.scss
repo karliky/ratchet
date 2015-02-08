@@ -63,7 +63,11 @@ body {
 .docs-header,
 .docs-sub-header {
   position: relative;
-  @include directional-gradient(#0a1855, #da0024)
+  @include directional-gradient(#bf7a6a, #aaa16a)
+}
+.docs-main-cover{
+  background-image: url("../img/background.jpg");
+  background-size: cover;
 }
 .docs-header {
   height: 100vh;
@@ -551,7 +555,7 @@ body {
   height: 44px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   border-bottom: 1px solid #ddd;
   -webkit-transition: -webkit-transform .5s;
      -moz-transition: -moz-transform .5s;
