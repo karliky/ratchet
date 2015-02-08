@@ -1,7 +1,7 @@
 {
-  "name": "ratchet",
-  "description": "Build mobile apps with simple HTML, CSS, and JS components.",
-  "version": "2.0.2",
+  "name": "ventura",
+  "description": "Ventura Highway - Build mobile apps with simple HTML, CSS, and JS components.",
+  "version": "3.0.0",
   "keywords": [
     "css",
     "fonts",
@@ -10,16 +10,16 @@
     "mobile",
     "prototype"
   ],
-  "homepage": "http://goratchet.com",
-  "author": "Connor Sears",
-  "style": "dist/css/ratchet.css",
-  "sass": "sass/ratchet.scss",
+  "homepage": "http://",
+  "author": "Carlos Hernández",
+  "style": "dist/css/ventura.css",
+  "sass": "sass/ventura.scss",
   "repository": {
     "type": "git",
-    "url": "https://github.com/twbs/ratchet.git"
+    "url": "git@github.com:karliky/ventura.git"
   },
   "bugs": {
-    "url": "https://github.com/twbs/ratchet/issues"
+    "url": "https://github.com/karliky/ventura/issues"
   },
   "license": "MIT",
   "scripts": {

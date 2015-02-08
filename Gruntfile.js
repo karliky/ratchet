@@ -1,8 +1,8 @@
 /*!
  * Ratchet's Gruntfile
  * http://goratchet.com
- * Copyright 2015 Connor Sears
- * Licensed under MIT (https://github.com/twbs/ratchet/blob/master/LICENSE)
+ * Copyright 2015 - @k4rliky Carlos Hernandez
+ * Licensed under MIT (https://github.com/karliky/ventura/blob/master/LICENSE)
  */
 
 /* jshint node: true */
@@ -32,11 +32,12 @@ module.exports = function (grunt) {
 
     banner: '/*!\n' +
             ' * =====================================================\n' +
-            ' * Ratchet v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Ventura v<%= pkg.version %> (<%= pkg.homepage %>)\n' +
+            ' * Ventura is based on Ratchet v2.0.2\n' +
             ' * Copyright <%= grunt.template.today("yyyy") %> <%= pkg.author %>\n' +
-            ' * Licensed under <%= pkg.license %> (https://github.com/twbs/ratchet/blob/master/LICENSE)\n' +
+            ' * Licensed under <%= pkg.license %> (https://github.com/karliky/ventura/blob/master/LICENSE)\n' +
             ' *\n' +
-            ' * v<%= pkg.version %> designed by @connors.\n' +
+            ' * v<%= pkg.version %>\n' +
             ' * =====================================================\n' +
             ' */\n',
 
@@ -69,7 +70,7 @@ module.exports = function (grunt) {
         unixNewlines: true
       },
       core: {
-        src: 'sass/ratchet.scss',
+        src: 'sass/ventura.scss',
         dest: '<%= meta.distPath %>css/<%= pkg.name %>.css'
       },
       android: {
@@ -79,6 +80,10 @@ module.exports = function (grunt) {
       ios: {
         src: 'sass/theme-ios.scss',
         dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css'
+      },
+      ventura: {
+        src: 'sass/theme-ventura.scss',
+        dest: '<%= meta.distPath %>css/<%= pkg.name %>-theme-ventura.css'
       },
       docs: {
         src: 'sass/docs.scss',
@@ -118,6 +123,11 @@ module.exports = function (grunt) {
       ios: {
         files: {
           '<%= sass.ios.dest %>': '<%= sass.ios.dest %>'
+        }
+      },
+      ventura: {
+        files: {
+          '<%= sass.ventura.dest %>': '<%= sass.ventura.dest %>'
         }
       },
       docs: {
@@ -177,6 +187,19 @@ module.exports = function (grunt) {
         },
         src: '<%= sass.ios.dest %>'
       },
+      ventura: {
+        options: {
+          browsers: [
+            'iOS >= 6',
+            'Android 2.3',
+            'Android >= 4',
+            'Chrome >= 20',
+            'Firefox >= 24',
+            'Opera >= 12'
+          ]
+        },
+        src: '<%= sass.ventura.dest %>'
+      },
       docs: {
         src: '<%= sass.docs.dest %>'
       }
@@ -193,7 +216,8 @@ module.exports = function (grunt) {
       theme: {
         files: {
           '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ios.css',
-          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css'
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-android.css',
+          '<%= meta.distPath %>css/<%= pkg.name %>-theme-ventura.min.css': '<%= meta.distPath %>css/<%= pkg.name %>-theme-ventura.css'
         }
       },
       docs: {
@@ -275,7 +299,8 @@ module.exports = function (grunt) {
       src: [
         '<%= meta.distPath %>/css/<%= pkg.name %>.css',
         '<%= meta.distPath %>/css/<%= pkg.name %>-theme-android.css',
-        '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css'
+        '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ios.css',
+        '<%= meta.distPath %>/css/<%= pkg.name %>-theme-ventura.css'
       ],
       docs: {
         options: {
