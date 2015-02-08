@@ -1,7 +1,7 @@
 {
-  "name": "ratchet",
-  "description": "Build mobile apps with simple HTML, CSS, and JS components.",
-  "version": "2.0.2",
+  "name": "ventura",
+  "description": "Ventura Highway - Build mobile apps with simple HTML, CSS, and JS components.",
+  "version": "3.0.0",
   "keywords": [
     "css",
     "js",
@@ -13,9 +13,9 @@
   ],
   "homepage": "http://goratchet.com",
   "main": [
-    "sass/ratchet.scss",
-    "dist/css/ratchet.css",
-    "dist/js/ratchet.js",
+    "sass/ventura.scss",
+    "dist/css/ventura.css",
+    "dist/js/ventura.js",
     "dist/fonts/ratchicons.eot",
     "dist/fonts/ratchicons.svg",
     "dist/fonts/ratchicons.ttf",
